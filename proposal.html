@@ -83,34 +83,37 @@
     position: absolute;
     width: 200px; height: 200px;
     transform: rotate(45deg);
-    border: 2px solid rgba(212, 168, 83, 0.12);
-    animation: diamond-float 20s ease-in-out infinite;
-    background: radial-gradient(circle at center, rgba(212, 168, 83, 0.04), transparent 70%);
+    border: 3px solid rgba(212, 168, 83, 0.25);
+    animation: diamond-float 14s ease-in-out infinite;
+    background: radial-gradient(circle at center, rgba(212, 168, 83, 0.08), transparent 60%);
+    box-shadow: 0 0 60px rgba(212, 168, 83, 0.06), inset 0 0 40px rgba(212, 168, 83, 0.04);
   }
 
   .diamond-shape::before {
     content: '';
     position: absolute;
-    inset: 30px;
-    border: 1.5px solid rgba(212, 168, 83, 0.08);
+    inset: 40px;
+    border: 2px solid rgba(212, 168, 83, 0.18);
   }
 
   .diamond-shape::after {
     content: '';
     position: absolute;
-    inset: 60px;
-    border: 1px solid rgba(212, 168, 83, 0.06);
+    inset: 80px;
+    border: 1.5px solid rgba(212, 168, 83, 0.12);
   }
 
-  .diamond-shape:nth-child(1) { top: 2%; left: -8%; width: 500px; height: 500px; animation-delay: 0s; border-color: rgba(232, 160, 191, 0.14); background: radial-gradient(circle at center, rgba(232, 160, 191, 0.05), transparent 70%); }
-  .diamond-shape:nth-child(2) { top: 25%; right: -6%; width: 450px; height: 450px; animation-delay: -7s; border-color: rgba(126, 184, 216, 0.14); background: radial-gradient(circle at center, rgba(126, 184, 216, 0.05), transparent 70%); }
-  .diamond-shape:nth-child(3) { top: 55%; left: 5%; width: 380px; height: 380px; animation-delay: -14s; border-color: rgba(240, 208, 96, 0.16); background: radial-gradient(circle at center, rgba(240, 208, 96, 0.06), transparent 70%); }
-  .diamond-shape:nth-child(4) { top: 75%; right: 8%; width: 420px; height: 420px; animation-delay: -3s; border-color: rgba(212, 168, 83, 0.12); background: radial-gradient(circle at center, rgba(212, 168, 83, 0.04), transparent 70%); }
-  .diamond-shape:nth-child(5) { top: 10%; left: 45%; width: 340px; height: 340px; animation-delay: -10s; border-color: rgba(122, 212, 160, 0.12); background: radial-gradient(circle at center, rgba(122, 212, 160, 0.04), transparent 70%); }
+  .diamond-shape:nth-child(1) { top: -5%; left: -10%; width: 700px; height: 700px; animation-delay: 0s; animation-duration: 16s; border-color: rgba(232, 160, 191, 0.3); background: radial-gradient(circle at center, rgba(232, 160, 191, 0.1), transparent 60%); box-shadow: 0 0 80px rgba(232, 160, 191, 0.08); }
+  .diamond-shape:nth-child(2) { top: 20%; right: -10%; width: 650px; height: 650px; animation-delay: -4s; animation-duration: 18s; border-color: rgba(126, 184, 216, 0.3); background: radial-gradient(circle at center, rgba(126, 184, 216, 0.1), transparent 60%); box-shadow: 0 0 80px rgba(126, 184, 216, 0.08); }
+  .diamond-shape:nth-child(3) { top: 50%; left: -5%; width: 550px; height: 550px; animation-delay: -9s; animation-duration: 15s; border-color: rgba(240, 208, 96, 0.35); background: radial-gradient(circle at center, rgba(240, 208, 96, 0.12), transparent 60%); box-shadow: 0 0 100px rgba(240, 208, 96, 0.1); }
+  .diamond-shape:nth-child(4) { top: 70%; right: 5%; width: 600px; height: 600px; animation-delay: -2s; animation-duration: 20s; border-color: rgba(212, 168, 83, 0.28); background: radial-gradient(circle at center, rgba(212, 168, 83, 0.08), transparent 60%); box-shadow: 0 0 80px rgba(212, 168, 83, 0.08); }
+  .diamond-shape:nth-child(5) { top: 5%; left: 40%; width: 500px; height: 500px; animation-delay: -6s; animation-duration: 17s; border-color: rgba(122, 212, 160, 0.25); background: radial-gradient(circle at center, rgba(122, 212, 160, 0.08), transparent 60%); box-shadow: 0 0 70px rgba(122, 212, 160, 0.06); }
 
   @keyframes diamond-float {
     0%, 100% { transform: rotate(45deg) translate(0, 0); opacity: 1; }
-    50% { transform: rotate(45deg) translate(20px, -25px); opacity: 0.7; }
+    25% { transform: rotate(45deg) translate(30px, -15px); opacity: 0.85; }
+    50% { transform: rotate(45deg) translate(40px, -40px); opacity: 0.65; }
+    75% { transform: rotate(45deg) translate(10px, -30px); opacity: 0.9; }
   }
 
   /* ── MAIN CONTAINER ── */
@@ -427,10 +430,10 @@
 
   /* ── PRICING ── */
   .pricing-container {
-    background: linear-gradient(135deg, rgba(212, 168, 83, 0.08), rgba(212, 168, 83, 0.02), rgba(232, 160, 191, 0.03));
-    border: 1px solid rgba(212, 168, 83, 0.18);
+    background: linear-gradient(135deg, rgba(212, 168, 83, 0.12), rgba(212, 168, 83, 0.04), rgba(232, 160, 191, 0.05));
+    border: 2px solid rgba(212, 168, 83, 0.3);
     border-radius: 16px;
-    padding: 40px 36px;
+    padding: 48px 44px;
     position: relative;
     overflow: hidden;
   }
@@ -457,8 +460,8 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    padding: 14px 0;
-    border-bottom: 1px solid rgba(212, 168, 83, 0.08);
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(212, 168, 83, 0.1);
     position: relative;
     z-index: 1;
   }
@@ -466,43 +469,44 @@
   .pricing-row:last-of-type { border-bottom: none; }
 
   .pricing-item {
-    font-size: 1.1rem;
-    color: var(--text-secondary);
-    font-weight: 300;
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    font-weight: 400;
   }
 
   .pricing-value {
     font-family: 'Cormorant Garamond', serif;
-    font-weight: 500;
-    font-size: 1.6rem;
-    color: var(--text-primary);
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: var(--gold-light);
   }
 
   .pricing-row.total {
-    margin-top: 8px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(212, 168, 83, 0.2);
+    margin-top: 12px;
+    padding-top: 24px;
+    border-top: 2px solid rgba(212, 168, 83, 0.35);
     border-bottom: none;
   }
 
   .pricing-row.total .pricing-item {
     color: var(--text-primary);
-    font-weight: 400;
-    font-size: 1.15rem;
+    font-weight: 600;
+    font-size: 1.5rem;
   }
 
   .pricing-row.total .pricing-value {
-    font-size: 2.2rem;
+    font-size: 3.2rem;
     color: var(--gold);
-    font-weight: 600;
+    font-weight: 700;
+    text-shadow: 0 0 30px rgba(212, 168, 83, 0.3);
   }
 
   .pricing-includes {
     margin-top: 20px;
     padding-top: 20px;
     border-top: 1px solid rgba(212, 168, 83, 0.08);
-    font-size: 0.95rem;
-    color: var(--text-dim);
+    font-size: 1.05rem;
+    color: var(--text-secondary);
     text-align: center;
     font-weight: 300;
     position: relative;
@@ -514,8 +518,8 @@
     text-align: center;
     font-family: 'Cormorant Garamond', serif;
     font-style: italic;
-    font-size: 1.2rem;
-    color: var(--gold-dim);
+    font-size: 1.3rem;
+    color: var(--gold);
     position: relative;
     z-index: 1;
   }
